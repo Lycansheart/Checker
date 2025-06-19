@@ -14,6 +14,29 @@
         padding: 20px;
         text-align: center;
       }
+
+      img {
+       border: 5px solid white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px black;
+        margin-top: 20px;
+        display: none;
+      }
+
+      button {
+      padding: 10px 20px;
+        font-size: 18px;
+        background: #ffdd57;
+        color: #333;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      }
+
+      button:hover {
+      background: #ffe884;
+      }
       
       h1 {
         color: #ffdd57;
@@ -23,9 +46,16 @@
   </head>
   <body>
     <h1>Welcome to my website, now with colour!</h1>
-    <p>This is just a test</p>
-    <img src="cat.jpg" alt="A cool cat..." width="300">
-    <p> </p>
-    <button onclick="alert('Excuse me, that is quite rude actually!')">Click me to see a cool cat</button> 
+    <p>This is just a test, don't click the button</p>
+    <button onclick="showCat()">Click me to see a cool cat</button>
+
+    <br>
+    <img id="catImage" src="cat.jpg" alt="A cool cat..." width="300">
+
+    <script>
+      function showCat() {
+        document.getElementById('catImage').style.display = 'block';
+      }
+    </script>
   </body>
 </html>
