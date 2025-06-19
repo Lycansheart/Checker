@@ -15,7 +15,12 @@
         text-align: center;
       }
 
-      img {
+      h1 {
+        color: #ffdd57;
+        text-shadow: 2px 2px 4px #000;
+      }
+
+      /*img {
        border: 5px solid white;
         border-radius: 10px;
         box-shadow: 0 0 10px black;
@@ -25,6 +30,7 @@
         margin-right: auto;
         display: none;
       }
+      */
 
       button {
       padding: 10px 20px;
@@ -40,11 +46,25 @@
       button:hover {
       background: #ffe884;
       }
-      
-      h1 {
-        color: #ffdd57;
-        text-shadow: 2px 2px 4px #000;
+
+      catImage {
+      width: 300px;
+        margin: 40px auto 0 auto;
+        border: 5px solid white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px black;
+
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all 0.8s ease-in-out;
+        display: block;
       }
+
+      .show {
+        opacity: 1;
+        transform: translateX(0);
+      
+      
     </style>
   </head>
   <body>
@@ -57,7 +77,8 @@
 
     <script>
       function showCat() {
-        document.getElementById('catImage').style.display = 'block';
+        document.getElementById('catImage').classList.add('show');
+        /* document.getElementById('catImage').style.display = 'block'; */
       }
     </script>
   </body>
