@@ -31,7 +31,7 @@
       background: #ffe884;
     }
 
-    /* 🌟 Base image styling */
+
     #catImage {
       width: 300px;
       margin: 40px auto 0 auto;
@@ -39,14 +39,12 @@
       border-radius: 10px;
       box-shadow: 0 0 10px black;
       
-      /* Hidden + slid to the left */
       opacity: 0;
       transform: translateX(-100%);
       transition: all 0.8s ease-in-out;
-      display: block;
+      display: none;
     }
 
-    /* 🎉 This class gets added to make it appear and slide in */
     .show {
       opacity: 1;
       transform: translateX(0);
