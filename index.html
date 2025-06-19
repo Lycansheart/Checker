@@ -1,83 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
- 
-    <title>My Website</title>
-    <style>
-      body {
-        background: linear-gradient(to right, #6a11cb, #2575fc);
-        color: white;
-        font-family: 'segoe UI',
-        sans-serif;
-        padding: 20px;
-        text-align: center;
-      }
+<html>
+<head>
+  <title>Slide-in Cat</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
 
-      h1 {
-        color: #ffdd57;
-        text-shadow: 2px 2px 4px #000;
-      }
+    h1 {
+      color: #ffdd57;
+      text-shadow: 2px 2px 4px #000;
+    }
 
-      /*img {
-       border: 5px solid white;
-        border-radius: 10px;
-        box-shadow: 0 0 10px black;
-        margin-top: 20px;
-        
-        margin-left: auto;
-        margin-right: auto;
-        display: none;
-      }
-      */
-
-      button {
+    button {
       padding: 10px 20px;
-        font-size: 18px;
-        background: #ffdd57;
-        color: #333;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-      }
+      font-size: 18px;
+      background: #ffdd57;
+      color: #333;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
 
-      button:hover {
+    button:hover {
       background: #ffe884;
-      }
+    }
 
-      catImage {
+    /* 🌟 Base image styling */
+    #catImage {
       width: 300px;
-        margin: 40px auto 0 auto;
-        border: 5px solid white;
-        border-radius: 10px;
-        box-shadow: 0 0 10px black;
-
-        opacity: 0;
-        transform: translateX(-100%);
-        transition: all 0.8s ease-in-out;
-        display: none;
-      }
-
-      .show {
-        opacity: 1;
-        transform: translateX(0);
-      }
+      margin: 40px auto 0 auto;
+      border: 5px solid white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px black;
       
-    </style>
-  </head>
-  <body>
-    <h1>Welcome to my website, now with colour!</h1>
-    <p>This is just a test, don't click the button</p>
-    <button onclick="showCat()">Click me to see a cool cat</button>
+      /* Hidden + slid to the left */
+      opacity: 0;
+      transform: translateX(-100%);
+      transition: all 0.8s ease-in-out;
+      display: block;
+    }
 
-    <br>
-    <img id="catImage" src="cat.jpg" alt="A cool cat..." width="300">
+    /* 🎉 This class gets added to make it appear and slide in */
+    .show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
+</head>
+<body>
 
-    <script>
-      function showCat() {
-        document.getElementById('catImage').classList.add('show');
-        /* document.getElementById('catImage').style.display = 'block'; */
-      }
-    </script>
-  </body>
+  <h1>Slide In, Cat!</h1>
+  <p>Click the button to summon the furry beast 🐱</p>
+
+  <button onclick="showCat()">Click Me</button>
+
+  <img id="catImage" src="cat.jpg" alt="A cool cat">
+
+  <script>
+    function showCat() {
+      document.getElementById('catImage').classList.add('show');
+    }
+  </script>
+
+</body>
 </html>
