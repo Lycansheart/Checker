@@ -56,16 +56,27 @@
   <h1>My website, now with colour!</h1>
   <p id="warningText"> This is a test, don't click the button</p>
 
-  <button onclick="showCat()">Click me to see a cool cat</button>
+  <button id="panicButton"
+    onclick="showCat()">Click me to see a cool cat</button>
   <p> </p>
   <img id="catImage" src="cat.jpg" alt="A cool cat">
 
   <script>
-    function showCat() {
-      
+    let panicClicked = false;
+
+    function handleClick() {
+      if (!panicClicked) {
+     
       document.getElementById('catImage').classList.add('show');
 
       document.getElementById('warningText').textContent = "See, I told you not to do that...";
+
+      document.getElementById('panicButton').textContent = "Quick, get me out of here!";
+        panicClicked = true;
+      }
+      else {
+        window.location.href = "https://youtube.com"
+      }
     }
   </script>
 
