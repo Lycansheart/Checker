@@ -42,10 +42,10 @@
       opacity: 0;
       transform: translateX(-100%);
       transition: all 0.8s ease-in-out;
-      display: none;
+      /* display: none; */
     }
 
-    .show {
+    #catImage.show {
       opacity: 1;
       transform: translateX(0);
     }
@@ -62,6 +62,7 @@
 
   <script>
     function showCat() {
+      const cat =
       document.getElementById('catImage').classList.add('show');
     }
   </script>
